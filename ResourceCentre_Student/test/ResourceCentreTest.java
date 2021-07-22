@@ -148,9 +148,8 @@ public class ResourceCentreTest {
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Camcorder arrayList is empty loan for camcorder should be unavailable", camcorderList);
 		
-		//Test if even after returned availibility is false
-		ResourceCentre.returnCamcorder(camcorderList);
-		assertFalse("Check if isAvailable is false", cc1.getIsAvailable());
+		//Test that only the correct tag allows the user to return the item
+		assertEquals("Test that only chromebook is returned", true, cb1.getIsAvailable());
 		
 		// After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
@@ -163,13 +162,12 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Done by Sanjeev 2
+		//Done by Sanjeev 4
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
 		
-		//Test if even after returned availibility is false
-		ResourceCentre.returnChromebook(chromebookList);
-		assertFalse("Check if isAvailable is false", cb1.getIsAvailable());
+		//Test that only the correct tag allows the user to return the item
+		assertEquals("Test that only chromebook is returned", true, cb1.getIsAvailable());
 		
 		//After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnChromebook(chromebookList, cc1.getAssetTag());
