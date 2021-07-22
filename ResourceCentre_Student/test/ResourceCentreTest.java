@@ -50,10 +50,17 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void testAddChromebook() {
-		//fail("Not yet implemented");
 		// write your code here
-		// Xing He
+		// Done by Xing He 
+		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList); // Item list is not null, so that can add new item
+		ResourceCentre.addChromebook(chromebookList, cb1); // Given an empty list, after adding 1 item, the size of the list is 1
+		assertEquals("Test if that Chromebook arraylist size is 1?", 1, chromebookList.size());
+		assertSame("Test that chromebook is added same as 1st item of the list?", cc2, chromebookList.get(0)); //The item just added is as same as the first item of the list
+		ResourceCentre.addCamcorder(camcorderList, cc2); // Add another item. test the size of the list is 2?
+		assertEquals("Test that chromebook arraylist size is 2?", 2, chromebookList.size());
+		// Done by XingHe
 	}
+
 	
 	@Test
 	public void testRetrieveAllCamcorder() {
@@ -153,9 +160,8 @@ public class ResourceCentreTest {
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Camcorder arrayList is empty loan for camcorder should be unavailable", camcorderList);
 		
-		//Test if even after returned availibility is false
-		ResourceCentre.returnCamcorder(camcorderList);
-		assertFalse("Check if isAvailable is false", cc1.getIsAvailable());
+		//Test that only the correct tag allows the user to return the item
+		assertEquals("Test that only chromebook is returned", true, cb1.getIsAvailable());
 		
 		// After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
@@ -168,13 +174,12 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Done by Sanjeev 2
+		//Done by Sanjeev 4
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
 		
-		//Test if even after returned availibility is false
-		ResourceCentre.returnChromebook(chromebookList);
-		assertFalse("Check if isAvailable is false", cb1.getIsAvailable());
+		//Test that only the correct tag allows the user to return the item
+		assertEquals("Test that only chromebook is returned", true, cb1.getIsAvailable());
 		
 		//After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnChromebook(chromebookList, cc1.getAssetTag());
