@@ -134,8 +134,15 @@ public class ResourceCentreTest {
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		// jerald
+		// Done by jerald
+		assertEquals("Test that a Chromebook item is available for loan", true, cb1.getIsAvailable());
 		
+		Chromebook cb3 = new Chromebook("CB0013", "Lenovo Chromebook", "Win 11");
+		assertTrue("Check if the availability of a new Chromebook is availability of loan", cb3.getIsAvailable());
+		
+		assertFalse("Test if the availability changes to false when a Chromebook is loaned out", ResourceCentre.doLoanChromebook(chromebookList, "CB0013", "22 July 2021"));
+		
+		assertNotNull("Test that a loaned Chromebook object has a due date", cb3.getDueDate());
 	}
 	
 	@Test
