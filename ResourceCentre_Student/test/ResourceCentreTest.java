@@ -58,7 +58,7 @@ public class ResourceCentreTest {
 		assertSame("Test that chromebook is added same as 1st item of the list?", cc2, chromebookList.get(0)); //The item just added is as same as the first item of the list
 		ResourceCentre.addCamcorder(camcorderList, cc2); // Add another item. test the size of the list is 2?
 		assertEquals("Test that chromebook arraylist size is 2?", 2, chromebookList.size());
-		// Done by Xing He
+		// Done by XingHe
 	}
 
 	
