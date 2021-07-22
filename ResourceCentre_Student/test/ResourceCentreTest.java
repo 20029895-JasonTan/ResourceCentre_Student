@@ -52,7 +52,7 @@ public class ResourceCentreTest {
 	public void testAddChromebook() {
 		
 		// write your code here
-		// Xing He
+		// Xing He code
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
 		ResourceCentre.addChromebook(chromebookList,cb1);
@@ -61,7 +61,7 @@ public class ResourceCentreTest {
 		assertSame("Test that chromebook is added same as 1st item of the list?", cb1, chromebookList.get(0));
 		
 		ResourceCentre.addChromebook(chromebookList, cb2);
-		assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size());
+		assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size()) ;
 		
 	}
 	
