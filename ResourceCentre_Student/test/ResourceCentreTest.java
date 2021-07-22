@@ -142,7 +142,7 @@ public class ResourceCentreTest {
 		assertNotNull("Test that if the Camcorder arrayList is empty loan for camcorder should be unavailable", camcorderList);
 		
 		//Test that only the correct tag allows the user to return the item
-		assertEquals("Test that only chromebook is returned", true, cc1.getAssetTag());
+		assertEquals("Test that only chromebook is returned", true, cb1.getIsAvailable());
 		
 		// After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
@@ -160,7 +160,7 @@ public class ResourceCentreTest {
 		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
 		
 		//Test that only the correct tag allows the user to return the item
-		assertEquals("Test that only chromebook is returned", true, cb1.getAssetTag());
+		assertEquals("Test that only chromebook is returned", true, cb1.getIsAvailable());
 		
 		//After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnChromebook(chromebookList, cc1.getAssetTag());
