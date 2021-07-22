@@ -142,12 +142,44 @@ public class ResourceCentreTest {
 	public void testDoReturnCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Done by Sanjeev
+		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
+		assertNotNull("Test that if the Camcorder arrayList is empty loan for camcorder should be unavailable", camcorderList);
+		
+		//Test that if the asset tag entered matches the camcorder
+		String tag = "";
+		ResourceCentre.doReturnCamcorder(camcorderList, tag);
+		assertEquals("Test that the asset tag matched the camcorder in the camcorder list", camcorderList, tag);
+		boolean isAvailable = true;
+		assertTrue(isAvailable);
+		
+		//Given a empty list, after returning 2 items, test if the availability is true
+		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
+		ResourceCentre.doReturnCamcorder(camcorderList, cc2.getAssetTag());
+		assertEquals("Test that camcorder availability is true?", true, cc1.getIsAvailable());
+		assertEquals("Test that camcorder availability is true?", true, cc2.getIsAvailable());
 		
 	}
 	@Test
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Done by Sanjeev
+		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
+		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
+		
+		//Test that if the asset tag entered matches the chromebook
+		String tag = "";
+		ResourceCentre.doReturnChromebook(chromebookList, tag);
+		assertEquals("Test that the asset tag matched the camcorder in the camcorder list", chromebookList, tag);
+		boolean isAvailable = true;
+		assertTrue(isAvailable);
+		
+		//Given a empty list, after returning 2 items, test if the availability is true
+		ResourceCentre.doReturnChromebook(chromebookList, cc1.getAssetTag());
+		ResourceCentre.doReturnChromebook(chromebookList, cc2.getAssetTag());
+		assertEquals("Test that camcorder availability is true?", true, cb1.getIsAvailable());
+		assertEquals("Test that camcorder availability is true?", true, cb2.getIsAvailable());
 	}
 	
 	@After
