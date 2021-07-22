@@ -139,7 +139,7 @@ public class ResourceCentreTest {
 		boolean isAvailable = true;
 		assertTrue(isAvailable);
 		
-		//Given a empty list, after returning 2 items, test if the availability is true
+		// After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
 		ResourceCentre.doReturnCamcorder(camcorderList, cc2.getAssetTag());
 		assertEquals("Test that camcorder availability is true?", true, cc1.getIsAvailable());
@@ -161,7 +161,7 @@ public class ResourceCentreTest {
 		boolean isAvailable = true;
 		assertTrue(isAvailable);
 		
-		//Given a empty list, after returning 2 items, test if the availability is true
+		//After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnChromebook(chromebookList, cc1.getAssetTag());
 		ResourceCentre.doReturnChromebook(chromebookList, cc2.getAssetTag());
 		assertEquals("Test that camcorder availability is true?", true, cb1.getIsAvailable());
