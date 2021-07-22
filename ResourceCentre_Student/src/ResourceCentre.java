@@ -11,11 +11,11 @@ public class ResourceCentre {
 		camcorderList.add(new Camcorder("CC002", "Panasonic HC-MDH2", 10));
 		chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
 		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
-
+		
 		int option = 0;
-
+		
 		while (option != 5) {
-
+			
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
@@ -32,22 +32,22 @@ public class ResourceCentre {
 				System.out.println("2. Chromebook");
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
-
+				
 				if (itemType == 1) {
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 					
-
+					
 				} else if (itemType == 2) {
 					// Add a Chromebook
 					Chromebook cb = inputChromebook();
 					ResourceCentre.addChromebook(chromebookList, cb);
-
+					
 				} else {
 					System.out.println("Invalid type");
 				}
-
+				
 			} else if (option == 3) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
@@ -56,7 +56,7 @@ public class ResourceCentre {
 				System.out.println("2. Chromebook");
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
-
+				
 				if (itemType == 1) {
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
@@ -66,7 +66,7 @@ public class ResourceCentre {
 				} else {
 					System.out.println("Invalid type");
 				}
-
+				
 			} else if (option == 4) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
@@ -217,7 +217,7 @@ public class ResourceCentre {
 		ResourceCentre.viewAllCamcorder(camcorderList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
-		Boolean isLoaned =doLoanCamcorder(camcorderList, tag, due);
+		Boolean isLoaned = doLoanCamcorder(camcorderList, tag, due);
 		if (isLoaned == false) {
 			System.out.println("Invalid asset tag");
 		} else {
@@ -227,7 +227,7 @@ public class ResourceCentre {
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// write your code here
-		//Done by (jerald)
+		//Done by jerald
 		boolean loanChromebook = false;
 		
 		for(Chromebook c : chromebookList) {
@@ -245,11 +245,11 @@ public class ResourceCentre {
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
-		//Done by (jerald)
+		//Done by jerald
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
-		Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
+		Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
 		if (isLoaned == false) {
 			System.out.println("Invalid asset tag");
 		} else {
