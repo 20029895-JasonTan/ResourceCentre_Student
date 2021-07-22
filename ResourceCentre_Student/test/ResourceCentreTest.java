@@ -50,19 +50,9 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void testAddChromebook() {
-		
+		//fail("Not yet implemented");
 		// write your code here
-		// Xing He code
-		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
-		
-		ResourceCentre.addChromebook(chromebookList,cb1);
-		assertEquals("Test if that chromebook is arraylist size is 1?", 1, chromebookList.size());
-		
-		assertSame("Test that chromebook is added same as 1st item of the list?", cb1, chromebookList.get(0));
-		
-		ResourceCentre.addChromebook(chromebookList, cb2);
-		assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size());
-		
+		// Xing He
 	}
 	
 	@Test
@@ -126,16 +116,12 @@ public class ResourceCentreTest {
 	public void testDoLoanCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
-		// jason
-		
 	}
 	
 	@Test
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		// jerald
-		
 	}
 	
 	@Test
@@ -164,7 +150,7 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Done by Sanjeev
+		//Done by Sanjeev 2
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
 		
