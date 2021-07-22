@@ -52,6 +52,7 @@ public class ResourceCentreTest {
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		// Xing He
 	}
 	
 	@Test
@@ -109,7 +110,6 @@ public class ResourceCentreTest {
 	public void testDoLoanCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
-		
 	}
 	
 	@Test
@@ -122,7 +122,7 @@ public class ResourceCentreTest {
 	public void testDoReturnCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
-		
+		// test by jerald 10000
 	}
 	@Test
 	public void testDoReturnChromebook() {
