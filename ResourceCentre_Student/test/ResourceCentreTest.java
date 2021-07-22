@@ -146,7 +146,7 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Done by Sanjeev 2
+		//Done by Sanjeev 3
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
 		
