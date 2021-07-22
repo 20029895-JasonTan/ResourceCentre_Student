@@ -37,6 +37,7 @@ public class ResourceCentre {
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
+					
 
 				} else if (itemType == 2) {
 					// Add a Chromebook
@@ -146,6 +147,10 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
+		output += String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION", "AVAILABLE", "DUE DATE","OPERATING SYSTEM");
+		for (Chromebook x : chromebookList) {
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", x.getAssetTag(),x.getDescription(),ResourceCentre.showAvailability(x.getIsAvailable()),x.getDueDate(),x.getOs());
+		}
 		return output;
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
@@ -171,13 +176,20 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+
 		// write your code here
-		return cb;
+		String assetTag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter os > ");
+		Chromebook cb = new Chromebook(assetTag, description, os);
+		return cb ;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
+		
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
