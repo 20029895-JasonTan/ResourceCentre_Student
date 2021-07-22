@@ -182,7 +182,7 @@ public class ResourceCentre {
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter os > ");
 		Chromebook cb = new Chromebook(assetTag, description, os);
-		return cb ;
+		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
