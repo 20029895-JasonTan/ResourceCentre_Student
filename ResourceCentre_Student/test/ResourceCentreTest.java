@@ -109,6 +109,7 @@ public class ResourceCentreTest {
 		assertEquals("Check that ViewAllChromebookList display the same list as retrieved.", testOutput, allChromebook);
 		//fail("Not yet implemented");
 		// write your code here
+		
 	}
 
 	@Test
@@ -127,13 +128,12 @@ public class ResourceCentreTest {
 	public void testDoReturnCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
-		// test by jerald 10000
+		
 	}
 	@Test
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Blah blah blah
 	}
 	
 	@After
