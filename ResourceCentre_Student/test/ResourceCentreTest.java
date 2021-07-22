@@ -102,7 +102,7 @@ public class ResourceCentreTest {
 	public void testDoReturnCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
-		// test by jerald 10000
+		
 	}
 	@Test
 	public void testDoReturnChromebook() {
