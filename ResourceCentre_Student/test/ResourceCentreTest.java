@@ -132,12 +132,9 @@ public class ResourceCentreTest {
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Camcorder arrayList is empty loan for camcorder should be unavailable", camcorderList);
 		
-		//Test that if the asset tag entered matches the camcorder
-		String tag = "";
-		ResourceCentre.doReturnCamcorder(camcorderList, tag);
-		assertEquals("Test that the asset tag matched the camcorder in the camcorder list", camcorderList, tag);
-		boolean isAvailable = true;
-		assertTrue(isAvailable);
+		//Test if even after returned availibility is false
+		ResourceCentre.returnCamcorder(camcorderList);
+		assertFalse("Check if isAvailable is false", cc1.getIsAvailable());
 		
 		// After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
@@ -154,12 +151,9 @@ public class ResourceCentreTest {
 		//Test that loan of camcorder should be unavailable if the camcorder arraylist in empty.
 		assertNotNull("Test that if the Chromebook arrayList is empty loan for chromebook should be unavailable", chromebookList);
 		
-		//Test that if the asset tag entered matches the chromebook
-		String tag = "";
-		ResourceCentre.doReturnChromebook(chromebookList, tag);
-		assertEquals("Test that the asset tag matched the camcorder in the camcorder list", chromebookList, tag);
-		boolean isAvailable = true;
-		assertTrue(isAvailable);
+		//Test if even after returned availibility is false
+		ResourceCentre.returnChromebook(chromebookList);
+		assertFalse("Check if isAvailable is false", cb1.getIsAvailable());
 		
 		//After returning 2 items, test if the availability is true
 		ResourceCentre.doReturnChromebook(chromebookList, cc1.getAssetTag());
