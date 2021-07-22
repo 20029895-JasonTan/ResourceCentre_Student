@@ -128,12 +128,13 @@ public class ResourceCentreTest {
 		String allCamcorder= ResourceCentre.retrieveAllCamcorder(camcorderList);
 		Camcorder cc2 = new Camcorder("CC0012", "Sony DSC-RX100M7", 20);
 		String testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CC0011", "Nikon HDSLR", "Yes", "", 40);
+		ResourceCentre.addCamcorder(camcorderList, cc1);
 		
 		assertNotEquals("Check that after students have loaned 1 camcorder, the total camcorder drops by 1", (allCamcorder.length() -1), allCamcorder);
 		
 		assertEquals("Check that after loaning out a specific camcorder, that item will no longer be in the list", cc2.getIsAvailable());
 		
-		assertEquals("Test that a camcorder that isnt being loaned out is still within the list for loan",testOutput, allCamcorder );
+		assertEquals("Test that a camcorder that isnt being loaned out is still within the list for loan",testOutput, camcorderList);
 		
 	}
 	
