@@ -1,6 +1,6 @@
 
 public class Item {
-	private String assetTag;
+	private static String assetTag;
 	private String description;
 	private String dueDate;
 	private boolean isAvailable;
@@ -12,7 +12,7 @@ public class Item {
 		this.isAvailable = true;
 	}
 
-	public String getAssetTag() {
+	public static String getAssetTag() {
 		return assetTag;
 	}
 
